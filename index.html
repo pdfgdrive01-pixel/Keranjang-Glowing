@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Keranjang Glowing | Skincare, Beauty & Rekomendasi</title>
+
+  <meta name="description" content="Keranjang Glowing adalah tempat menemukan tips skincare, beauty, review dan rekomendasi produk untuk membantu kamu mendapatkan kulit sehat dan glowing tanpa bikin dompet nangis.">
+
+  <meta name="keywords" content="Keranjang Glowing, skincare, beauty, skincare pemula, tips skincare, review skincare, rekomendasi skincare, sunscreen, moisturizer">
+
+  <meta name="author" content="Keranjang Glowing">
+
+  <meta property="og:title" content="Keranjang Glowing">
+  <meta property="og:description" content="Skincare, beauty, tips & rekomendasi yang bikin glowing tanpa bikin dompet nangis.">
+  <meta property="og:type" content="website">
+
+  <style>
+
+    /* ================================
+       GLOBAL
+    ================================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fffaf7;
+      color: #332a27;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+
+    /* ================================
+       NAVIGATION
+    ================================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,250,247,0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid #f0e3de;
+    }
+
+    .nav-container {
+      max-width: 1180px;
+      margin: auto;
+      padding: 15px 22px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      color: #49362f;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: #d47761;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      transition: .2s;
+    }
+
+    .nav-links a:hover {
+      color: #d47761;
+    }
+
+
+    /* ================================
+       HERO
+    ================================= */
+
+    .hero {
+      max-width: 1180px;
+      margin: auto;
+
+      padding: 85px 22px 75px;
+
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+
+      align-items: center;
+      gap: 55px;
+    }
+
+    .badge {
+      display: inline-block;
+
+      background: #f8e3da;
+      color: #a55f4c;
+
+      padding: 8px 15px;
+
+      border-radius: 30px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+
+      line-height: 1.02;
+
+      letter-spacing: -2px;
+
+      color: #3c2d28;
+
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #d47761;
+    }
+
+    .hero-text {
+      font-size: 18px;
+
+      color: #756862;
+
+      max-width: 620px;
+
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 14px 22px;
+
+      border-radius: 12px;
+
+      font-weight: 700;
+
+      display: inline-block;
+
+      transition: .2s;
+    }
+
+    .btn-primary {
+      background: #3c2d28;
+
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+
+      background: #59423a;
+    }
+
+    .btn-secondary {
+      background: white;
+
+      border: 1px solid #eadbd5;
+
+      color: #5d463d;
+    }
+
+    .btn-secondary:hover {
+      background: #fff2ed;
+    }
+
+
+    /* ================================
+       MOWING MASKOT
+    ================================= */
+
+    .cat-card {
+      min-height: 390px;
+
+      border-radius: 35px;
+
+      background:
+        radial-gradient(
+          circle at 50% 20%,
+          #ffffff 0,
+          #fff3ee 35%,
+          #f5dcd1 100%
+        );
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+
+      box-shadow:
+        0 25px 60px rgba(111,74,58,.12);
+
+      overflow: hidden;
+    }
+
+    .cat {
+      font-size: 145px;
+
+      filter:
+        drop-shadow(
+          0 15px 10px rgba(0,0,0,.08)
+        );
+
+      animation:
+        float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+
+    }
+
+    .bubble {
+      position: absolute;
+
+      background:
+        rgba(255,255,255,.88);
+
+      padding: 10px 15px;
+
+      border-radius: 20px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      box-shadow:
+        0 8px 20px rgba(0,0,0,.07);
+    }
+
+    .bubble.one {
+      top: 50px;
+      right: 25px;
+    }
+
+    .bubble.two {
+      bottom: 60px;
+      left: 25px;
+    }
+
+    .maskot-label {
+      position: absolute;
+
+      bottom: 18px;
+      right: 20px;
+
+      background: #3c2d28;
+
+      color: white;
+
+      padding: 7px 12px;
+
+      border-radius: 20px;
+
+      font-size: 12px;
+
+      font-weight: 700;
+    }
+
+
+    /* ================================
+       SECTION
+    ================================= */
+
+    section {
+      padding: 80px 22px;
+    }
+
+    .section-inner {
+      max-width: 1180px;
+
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+
+      max-width: 700px;
+
+      margin: 0 auto 45px;
+    }
+
+    .section-title small {
+      color: #d47761;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+
+      margin: 8px 0 12px;
+
+      color: #3c2d28;
+    }
+
+    .section-title p {
+      color: #796d68;
+    }
+
+
+    /* ================================
+       CARDS
+    ================================= */
+
+    .cards {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+
+      padding: 28px;
+
+      border-radius: 22px;
+
+      border: 1px solid #f0e2dc;
+
+      box-shadow:
+        0 10px 30px rgba(76,52,42,.05);
+
+      transition: .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+
+      box-shadow:
+        0 18px 40px rgba(76,52,42,.09);
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+
+      border-radius: 15px;
+
+      background: #fff0ea;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 25px;
+
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 9px;
+
+      color: #46352e;
+    }
+
+    .card p {
+      color: #7a6c66;
+
+      font-size: 14px;
+    }
+
+
+    /* ================================
+       FEATURE
+    ================================= */
+
+    .feature {
+      background: #3c2d28;
+
+      color: white;
+    }
+
+    .feature-container {
+      max-width: 1000px;
+
+      margin: auto;
+
+      text-align: center;
+    }
+
+    .feature h2 {
+      font-size: 38px;
+
+      margin-bottom: 15px;
+    }
+
+    .feature p {
+      color: #e7d9d3;
+
+      max-width: 650px;
+
+      margin:
+        auto
+        auto
+        28px;
+    }
+
+    .feature .btn {
+      background: #f6c5b5;
+
+      color: #3c2d28;
+    }
+
+
+    /* ================================
+       ARTICLE
+    ================================= */
+
+    .article {
+      padding: 0;
+
+      overflow: hidden;
+    }
+
+    .article-top {
+      height: 150px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f8d9cd,
+          #fff0e9
+        );
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 65px;
+    }
+
+    .article-content {
+      padding: 23px;
+    }
+
+    .article-content h3 {
+      font-size: 19px;
+
+      margin-bottom: 9px;
+    }
+
+    .read {
+      display: inline-block;
+
+      margin-top: 15px;
+
+      color: #c46751;
+
+      font-weight: 700;
+
+      font-size: 14px;
+    }
+
+
+    /* ================================
+       PRODUCT SECTION
+    ================================= */
+
+    .product-section {
+      background: #fff5f0;
+    }
+
+    .product-card {
+      background: white;
+
+      padding: 30px;
+
+      border-radius: 22px;
+
+      border: 1px solid #f0e2dc;
+
+      text-align: center;
+    }
+
+    .product-icon {
+      font-size: 55px;
+
+      margin-bottom: 15px;
+    }
+
+
+    /* ================================
+       MOWING SECTION
+    ================================= */
+
+    .mowing-section {
+      background: #fffaf7;
+    }
+
+    .mowing-box {
+      max-width: 900px;
+
+      margin: auto;
+
+      background: white;
+
+      border: 1px solid #f0e2dc;
+
+      border-radius: 30px;
+
+      padding: 45px;
+
+      display: grid;
+
+      grid-template-columns: 180px 1fr;
+
+      align-items: center;
+
+      gap: 35px;
+
+      box-shadow:
+        0 15px 45px rgba(76,52,42,.06);
+    }
+
+    .mowing-avatar {
+      width: 160px;
+      height: 160px;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f8d9cd,
+          #fff0e9
+        );
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 85px;
+    }
+
+    .mowing-box h2 {
+      color: #3c2d28;
+
+      margin-bottom: 12px;
+    }
+
+    .mowing-box p {
+      color: #756862;
+
+      margin-bottom: 10px;
+    }
+
+    .mowing-name {
+      color: #d47761;
+
+      font-weight: 800;
+    }
+
+
+    /* ================================
+       CTA
+    ================================= */
+
+    .cta {
+      background: #fff0ea;
+
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 650px;
+
+      margin:
+        0
+        auto
+        25px;
+
+      color: #756862;
+    }
+
+
+    /* ================================
+       FOOTER
+    ================================= */
+
+    footer {
+      background: #29201d;
+
+      color: #eee;
+
+      padding:
+        50px
+        22px
+        25px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        2fr 1fr 1fr;
+
+      gap: 40px;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer a {
+      color: #bdb2ae;
+
+      font-size: 14px;
+    }
+
+    footer a {
+      display: block;
+
+      margin: 7px 0;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      max-width: 1180px;
+
+      margin: 40px auto 0;
+
+      padding-top: 20px;
+
+      border-top:
+        1px solid #493d39;
+
+      color: #968b87;
+
+      font-size: 13px;
+
+      text-align: center;
+    }
+
+
+    /* ================================
+       MOBILE
+    ================================= */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 55px;
+      }
+
+      .cat-card {
+        min-height: 300px;
+      }
+
+      .cat {
+        font-size: 110px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .mowing-box {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding: 30px;
+      }
+
+      .mowing-avatar {
+        margin: auto;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2,
+      .feature h2,
+      .cta h2 {
+        font-size: 30px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =================================
+       NAVIGATION
+  ================================== -->
+
+  <nav>
+
+    <div class="nav-container">
+
+      <a href="#" class="logo">
+        🛒 Keranjang <span>Glowing</span>
+      </a>
+
+      <div class="nav-links">
+
+        <a href="#tips">
+          Tips
+        </a>
+
+        <a href="#artikel">
+          Artikel
+        </a>
+
+        <a href="#produk">
+          Produk
+        </a>
+
+        <a href="#mowing">
+          Mowing
+        </a>
+
+        <a href="#kontak">
+          Kerja Sama
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- =================================
+       HERO
+  ================================== -->
+
+  <header class="hero">
+
+    <div>
+
+      <div class="badge">
+        ✨ SKINCARE • BEAUTY • REKOMENDASI
+      </div>
+
+      <h1>
+
+        Glowing boleh,
+
+        <br>
+
+        <span>
+          dompet jangan kosong.
+        </span>
+
+      </h1>
+
+      <p class="hero-text">
+
+        Selamat datang di
+
+        <strong>
+          Keranjang Glowing.
+        </strong>
+
+        Tempat menemukan tips skincare,
+        beauty, edukasi, review dan
+        rekomendasi produk dengan cara
+        yang simpel, relatable,
+        dan sedikit drama. 😹✨
+
+      </p>
+
+
+      <div class="buttons">
+
+        <a
+          href="#tips"
+          class="btn btn-primary"
+        >
+          ✨ Mulai Eksplorasi
+        </a>
+
+        <a
+          href="#artikel"
+          class="btn btn-secondary"
+        >
+          📚 Baca Artikel
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- MOWING MASKOT -->
+
+    <div class="cat-card">
+
+      <div class="bubble one">
+        ✨ Aku mau glowing!
+      </div>
+
+      <div class="cat">
+        🐱
+      </div>
+
+      <div class="bubble two">
+        💸 Tapi jangan mahal...
+      </div>
+
+      <div class="maskot-label">
+        🐾 Mowing • Maskot
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =================================
+       TIPS
+  ================================== -->
+
+  <section id="tips">
+
+    <div class="section-inner">
+
+
+      <div class="section-title">
+
+        <small>
+          Skincare Guide
+        </small>
+
+        <h2>
+          Skincare Tidak Harus Ribet
+        </h2>
+
+        <p>
+          Mulai dari dasar,
+          pahami kebutuhan kulit,
+          kemudian pilih produk
+          dengan lebih bijak.
+        </p>
+
+      </div>
+
+
+      <div class="cards">
+
+
+        <div class="card">
+
+          <div class="icon">
+            🧴
+          </div>
+
+          <h3>
+            Skincare Pemula
+          </h3>
+
+          <p>
+            Pelajari basic skincare
+            dan cara membangun
+            rutinitas sederhana
+            tanpa harus membeli
+            terlalu banyak produk.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">
+            ☀️
+          </div>
+
+          <h3>
+            Sunscreen
+          </h3>
+
+          <p>
+            Kenali pentingnya sunscreen,
+            cara penggunaan yang tepat,
+            dan kesalahan yang sering
+            dilakukan.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">
+            ✨
+          </div>
+
+          <h3>
+            Kulit Kusam
+          </h3>
+
+          <p>
+            Kenali berbagai faktor
+            yang dapat membuat kulit
+            terlihat kusam tanpa
+            tergoda klaim hasil instan.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       BRAND MESSAGE
+  ================================== -->
+
+  <section class="feature">
+
+    <div class="feature-container">
+
+      <h2>
+        Mau Glowing Tanpa Bikin Dompet Nangis? 😹
+      </h2>
+
+      <p>
+
+        Keranjang Glowing membantu kamu
+        menemukan informasi skincare,
+        beauty dan rekomendasi produk
+        dengan pendekatan yang sederhana
+        dan relatable.
+
+        <br><br>
+
+        Karena skincare itu perjalanan,
+        bukan perlombaan.
+
+      </p>
+
+      <a
+        href="#produk"
+        class="btn"
+      >
+        🛍️ Jelajahi Produk
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       ARTIKEL
+  ================================== -->
+
+  <section id="artikel">
+
+    <div class="section-inner">
+
+
+      <div class="section-title">
+
+        <small>
+          Knowledge Corner
+        </small>
+
+        <h2>
+          Artikel & Tips
+        </h2>
+
+        <p>
+          Informasi skincare dan beauty
+          yang dibuat sederhana
+          agar mudah dipahami.
+        </p>
+
+      </div>
+
+
+      <div class="cards">
+
+
+        <article class="card article">
+
+          <div class="article-top">
+            🧼
+          </div>
+
+          <div class="article-content">
+
+            <h3>
+              Mitos atau Fakta:
+              Makin Sering Cuci Muka,
+              Makin Bersih?
+            </h3>
+
+            <p>
+              Apakah mencuci wajah
+              berkali-kali benar-benar
+              membuat kulit semakin bersih?
+            </p>
+
+            <a
+              href="#"
+              class="read"
+            >
+              Baca selengkapnya →
+            </a>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="card article">
+
+          <div class="article-top">
+            ☀️
+          </div>
+
+          <div class="article-content">
+
+            <h3>
+              Kesalahan Memakai
+              Sunscreen yang Sering Terjadi
+            </h3>
+
+            <p>
+              Sudah pakai sunscreen tetapi
+              wajah tetap terasa berminyak?
+              Bisa jadi ada yang perlu
+              diperbaiki.
+            </p>
+
+            <a
+              href="#"
+              class="read"
+            >
+              Baca selengkapnya →
+            </a>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="card article">
+
+          <div class="article-top">
+            💧
+          </div>
+
+          <div class="article-content">
+
+            <h3>
+              Panduan Skincare
+              untuk Pemula
+            </h3>
+
+            <p>
+              Tidak perlu langsung membeli
+              banyak produk.
+              Kenali basic skincare
+              terlebih dahulu.
+            </p>
+
+            <a
+              href="#"
+              class="read"
+            >
+              Baca selengkapnya →
+            </a>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       PRODUK
+  ================================== -->
+
+  <section
+    id="produk"
+    class="product-section"
+  >
+
+    <div class="section-inner">
+
+
+      <div class="section-title">
+
+        <small>
+          Shopping Corner
+        </small>
+
+        <h2>
+          Rekomendasi Produk
+        </h2>
+
+        <p>
+          Temukan produk skincare
+          yang menarik untuk
+          masuk ke keranjangmu.
+        </p>
+
+      </div>
+
+
+      <div class="cards">
+
+
+        <div class="product-card">
+
+          <div class="product-icon">
+            🧴
+          </div>
+
+          <h3>
+            Cleanser
+          </h3>
+
+          <p>
+            Rekomendasi pembersih wajah
+            untuk rutinitas dasar.
+          </p>
+
+          <br>
+
+          <a
+            href="#"
+            class="btn btn-secondary"
+          >
+            Lihat Rekomendasi
+          </a>
+
+        </div>
+
+
+
+        <div class="product-card">
+
+          <div class="product-icon">
+            💧
+          </div>
+
+          <h3>
+            Moisturizer
+          </h3>
+
+          <p>
+            Pilihan moisturizer
+            untuk membantu menjaga
+            kelembapan kulit.
+          </p>
+
+          <br>
+
+          <a
+            href="#"
+            class="btn btn-secondary"
+          >
+            Lihat Rekomendasi
+          </a>
+
+        </div>
+
+
+
+        <div class="product-card">
+
+          <div class="product-icon">
+            ☀️
+          </div>
+
+          <h3>
+            Sunscreen
+          </h3>
+
+          <p>
+            Rekomendasi sunscreen
+            untuk perlindungan
+            sehari-hari.
+          </p>
+
+          <br>
+
+          <a
+            href="#"
+            class="btn btn-secondary"
+          >
+            Lihat Rekomendasi
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       MOWING MASKOT
+  ================================== -->
+
+  <section
+    id="mowing"
+    class="mowing-section"
+  >
+
+    <div class="section-inner">
+
+
+      <div class="section-title">
+
+        <small>
+          Meet The Mascot
+        </small>
+
+        <h2>
+          Kenalan dengan Mowing 🐱
+        </h2>
+
+        <p>
+          Si kucing kecil di balik
+          drama skincare Keranjang Glowing.
+        </p>
+
+      </div>
+
+
+      <div class="mowing-box">
+
+
+        <div class="mowing-avatar">
+          🐱
+        </div>
+
+
+        <div>
+
+          <h2>
+            Mowing
+          </h2>
+
+          <p class="mowing-name">
+            Maskot Keranjang Glowing
+          </p>
+
+          <p>
+            Mowing adalah karakter kucing
+            kecil yang menemani perjalanan
+            skincare di Keranjang Glowing.
+          </p>
+
+          <p>
+            Suka skincare, suka belajar,
+            suka glowing dan...
+            paling suka kalau ada promo. 😹
+          </p>
+
+          <p>
+            Misi Mowing sederhana:
+            membantu membuat dunia skincare
+            terasa lebih mudah dipahami,
+            menyenangkan dan relatable.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       BRAND COLLABORATION
+  ================================== -->
+
+  <section
+    id="kontak"
+    class="cta"
+  >
+
+    <div class="section-inner">
+
+      <h2>
+        Punya Brand yang Mau Dikenalkan? ✨
+      </h2>
+
+      <p>
+
+        Keranjang Glowing terbuka untuk
+        collaboration, product review,
+        affiliate partnership,
+        sponsored content dan
+        campaign beauty & lifestyle.
+
+      </p>
+
+      <a
+        href="#"
+        class="btn btn-primary"
+      >
+        📩 Hubungi Keranjang Glowing
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       FOOTER
+  ================================== -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+
+      <div>
+
+        <h3>
+          🛒 Keranjang Glowing
+        </h3>
+
+        <p>
+          Skincare • Beauty • Tips • Review
+        </p>
+
+        <p style="margin-top:12px;">
+          Glowing boleh,
+          dompet jangan kosong. ✨
+        </p>
+
+        <p style="margin-top:12px;">
+          🐱 Mowing adalah maskot
+          Keranjang Glowing.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Explore
+        </h3>
+
+        <a href="#tips">
+          Skincare Tips
+        </a>
+
+        <a href="#artikel">
+          Artikel
+        </a>
+
+        <a href="#produk">
+          Rekomendasi Produk
+        </a>
+
+        <a href="#mowing">
+          Mowing
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Business
+        </h3>
+
+        <a href="#kontak">
+          Collaboration
+        </a>
+
+        <a href="#kontak">
+          Endorse
+        </a>
+
+        <a href="#kontak">
+          Affiliate
+        </a>
+
+        <a href="#kontak">
+          Contact
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Keranjang Glowing.
+      All rights reserved.
+      🐱 Mowing is the official mascot.
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
